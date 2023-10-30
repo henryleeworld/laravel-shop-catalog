@@ -26,7 +26,7 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('permission_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.permissions.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? "active" : "" }}">
+                            <a href="{{ route("admin.permissions.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? "c-active" : "" }}">
                                 <i class="fa-fw fas fa-unlock-alt c-sidebar-nav-icon">
 
                                 </i>
@@ -36,7 +36,7 @@
                     @endcan
                     @can('role_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.roles.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? "active" : "" }}">
+                            <a href="{{ route("admin.roles.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? "c-active" : "" }}">
                                 <i class="fa-fw fas fa-briefcase c-sidebar-nav-icon">
 
                                 </i>
@@ -46,7 +46,7 @@
                     @endcan
                     @can('user_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.users.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? "active" : "" }}">
+                            <a href="{{ route("admin.users.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? "c-active" : "" }}">
                                 <i class="fa-fw fas fa-user c-sidebar-nav-icon">
 
                                 </i>
@@ -59,7 +59,7 @@
         @endcan
         @can('contract_access')
             <li class="c-sidebar-nav-item">
-                <a href="{{ route("admin.contracts.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/contracts") || request()->is("admin/contracts/*") ? "active" : "" }}">
+                <a href="{{ route("admin.contracts.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/contracts") || request()->is("admin/contracts/*") ? "c-active" : "" }}">
                     <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                     </i>
@@ -79,7 +79,7 @@
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('product_category_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.product-categories.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/product-categories') || request()->is('admin/product-categories/*') ? "active" : "" }}">
+                            <a href="{{ route("admin.product-categories.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/product-categories') || request()->is('admin/product-categories/*') ? "c-active" : "" }}">
                                 <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
 
                                 </i>
@@ -89,7 +89,7 @@
                     @endcan
                     @can('product_tag_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.product-tags.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/product-tags') || request()->is('admin/product-tags/*') ? "active" : "" }}">
+                            <a href="{{ route("admin.product-tags.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/product-tags') || request()->is('admin/product-tags/*') ? "c-active" : "" }}">
                                 <i class="fa-fw fas fa-folder c-sidebar-nav-icon">
 
                                 </i>
@@ -99,7 +99,7 @@
                     @endcan
                     @can('product_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.products.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/products') || request()->is('admin/products/*') ? "active" : "" }}">
+                            <a href="{{ route("admin.products.index") }}" class="c-sidebar-nav-link {{ request()->is('admin/products') || request()->is('admin/products/*') ? "c-active" : "" }}">
                                 <i class="fa-fw fas fa-shopping-cart c-sidebar-nav-icon">
 
                                 </i>
@@ -114,7 +114,7 @@
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
             @can('profile_password_edit')
                 <li class="c-sidebar-nav-item">
-                    <a class="c-sidebar-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'active' : '' }}" href="{{ route('profile.password.edit') }}">
+                    <a class="c-sidebar-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'c-active' : '' }}" href="{{ route('profile.password.edit') }}">
                         <i class="fa-fw fas fa-key c-sidebar-nav-icon">
                         </i>
                         {{ trans('global.change_password') }}
